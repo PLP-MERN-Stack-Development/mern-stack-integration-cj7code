@@ -136,6 +136,19 @@ App runs on: `http://localhost:5173`
 
 ---
 
+## 🖼 Screenshots
+
+| Page | Preview |
+|------|----------|
+| 🏠 **Home Page** | <img src="./client/public/screenshots/home.png" alt="Home Page" width="300"/> |
+| 🔐 **Login Page** | <img src="./client/public/screenshots/login.png" alt="Login Page" width="300"/> |
+| 📝 **Register Page** | <img src="./client/public/screenshots/register.png" alt="Register Page" width="300"/> |
+| ✍️ **Create Post Page** | <img src="./client/public/screenshots/create-post.png" alt="Create Post Page" width="300"/> |
+
+
+
+---
+
 ## 🧩 Features Implemented
 
 - User registration and login  
