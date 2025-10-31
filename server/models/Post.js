@@ -67,18 +67,25 @@ const PostSchema = new mongoose.Schema(
 );
 
 // Create slug from title before saving
-PostSchema.pre('save', function (next) {
-  if (!this.isModified('title')) {
-    return next();
+PostSchema.pre('validate', async function (next) {
+  if (!this.slug && this.title) {
+    let baseSlug = this.title
+      .toLowerCase()
+      .replace(/[^\w ]+/g, '')
+      .replace(/ +/g, '-');
+    let slug = baseSlug;
+    let counter = 1;
+
+    const Post = mongoose.model('Post');
+    while (await Post.exists({ slug })) {
+      slug = `${baseSlug}-${counter++}`;
+    }
+    this.slug = slug;
   }
-  
-  this.slug = this.title
-    .toLowerCase()
-    .replace(/[^\w ]+/g, '')
-    .replace(/ +/g, '-');
-    
   next();
 });
+
+
 
 // Virtual for post URL
 PostSchema.virtual('url').get(function () {
