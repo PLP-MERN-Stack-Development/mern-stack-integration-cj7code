@@ -1,35 +1,42 @@
-MERN Blog Application
+# MERN Blog Application
 
-A full-stack blog platform built using the MERN stack (MongoDB, Express, React, Node.js).
+A full-stack blog platform built using the **MERN stack (MongoDB, Express, React, Node.js)**.  
 It allows users to create, read, update, and delete blog posts, register and log in with authentication, and provides an admin interface for managing content.
 
-🚀 Project Overview
+---
 
-This MERN Blog application demonstrates integration between the frontend (React + Vite) and the backend (Express + MongoDB).
+## 🚀 Project Overview
+
+This MERN Blog application demonstrates integration between the frontend (**React + Vite**) and the backend (**Express + MongoDB**).  
 The system supports user authentication (JWT-based), role management (Admin/User), and basic CRUD operations for blog posts.
 
-🎯 Core Objectives
+---
 
-Implement RESTful API with Node.js and Express
+## 🎯 Core Objectives
 
-Connect to a MongoDB Atlas database
+- Implement RESTful API with Node.js and Express  
+- Connect to a MongoDB Atlas database  
+- Build a React frontend with Vite  
+- Manage authentication using JWT  
+- Demonstrate full MERN stack integration  
 
-Build a React frontend with Vite
+---
 
-Manage authentication using JWT
+## ⚙️ Tech Stack
 
-Demonstrate full MERN stack integration
-
-⚙️ Tech Stack
 | Layer          | Technology Used                                    |
 | -------------- | -------------------------------------------------- |
-| Frontend       | React (Vite), Axios, React Router DOM, TailwindCSS |
-| Backend        | Node.js, Express.js, Mongoose                      |
-| Database       | MongoDB Atlas                                      |
-| Authentication | JWT (JSON Web Token)                               |
-| Tools          | GitHub Classroom, Postman, VS Code                 |
+| **Frontend**   | React (Vite), Axios, React Router DOM, TailwindCSS |
+| **Backend**    | Node.js, Express.js, Mongoose                      |
+| **Database**   | MongoDB Atlas                                      |
+| **Auth**       | JWT (JSON Web Token)                               |
+| **Tools**      | GitHub Classroom, Postman, VS Code                 |
 
-📂 Folder Structure
+---
+
+## 📂 Folder Structure
+
+```
 mern-blog/
 ├── client/                 # React front-end
 │   ├── public/             # Static files
@@ -51,79 +58,70 @@ mern-blog/
 │   ├── server.js           # Main server file
 │   └── package.json        # Server dependencies
 └── STUDENT_README.md       # Project documentation
+```
 
-⚡️ Setup Instructions
-🔧 Prerequisites
+---
+
+## ⚡️ Setup Instructions
+
+### 🔧 Prerequisites
 
 Ensure you have installed:
+- Node.js (v18+)
+- npm or yarn
+- MongoDB Atlas account
+- Git
 
-Node.js (v18+)
+---
 
-npm or yarn
+### 🖥 Backend Setup
 
-MongoDB Atlas account
-
-Git
-
-🖥 Backend Setup
-
-Navigate to the server folder
-
+```bash
 cd server
-
-
-Install dependencies
-
 npm install
+```
 
+Create a `.env` file in `/server` based on `.env.example`:
 
-Set up environment variables
-
-Create a .env file in /server based on .env.example:
-
+```
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/mern_blog
 JWT_SECRET=your_jwt_secret
+```
 
-
-Start the backend server
-
+Start the backend server:
+```bash
 npm run dev
+```
+Server runs on: `http://localhost:5000`
 
+---
 
-Server runs on: http://localhost:5000
+### 🌐 Frontend Setup
 
-🌐 Frontend Setup
-
-Navigate to the client folder
-
+```bash
 cd client
-
-
-Install dependencies
-
 npm install
+```
 
+Create a `.env` file in `/client` based on `.env.example`:
 
-Set up environment variables
-
-Create a .env file in /client based on .env.example:
-
+```
 VITE_API_URL=http://localhost:5000/api
+```
 
-
-Run the frontend
-
+Run the frontend:
+```bash
 npm run dev
+```
+App runs on: `http://localhost:5173`
 
+---
 
-App runs on: http://localhost:5173
+## 📡 API Documentation
 
-📡 API Documentation
-Base URL
-http://localhost:5000/api
+**Base URL:** `http://localhost:5000/api`
 
-Endpoints
 | Method | Endpoint         | Description              | Auth |
 | ------ | ---------------- | ------------------------ | ---- |
 | POST   | `/auth/register` | Register a new user      | ❌    |
@@ -134,51 +132,46 @@ Endpoints
 | PUT    | `/posts/:id`     | Update a post            | ✅    |
 | DELETE | `/posts/:id`     | Delete a post            | ✅    |
 
+✅ = Requires token (Authorization: Bearer `<JWT>`)
 
-✅ = Requires token (Authorization: Bearer <JWT>)
+---
 
-🧩 Features Implemented
+## 🧩 Features Implemented
 
-User registration and login
+- User registration and login  
+- JWT-based authentication and authorization  
+- Role-based access (Admin/User)  
+- CRUD operations for blog posts  
+- Responsive frontend (React + Tailwind)  
+- MongoDB Atlas cloud integration  
+- Proxy configuration for API requests via Vite  
 
-JWT-based authentication and authorization
+---
 
-Role-based access (Admin/User)
+## 🧪 Testing
 
-CRUD operations for blog posts
+- All endpoints tested using **Postman**  
+- Database verified using **MongoDB Atlas**  
+- Frontend and backend fully integrated and tested successfully  
 
-Responsive frontend (React + Tailwind)
+---
 
-MongoDB Atlas cloud integration
+## 🧭 Submission Checklist
 
-Proxy configuration for API requests via Vite
+✅ Both client and server code included  
+✅ `.env.example` files provided  
+✅ Comprehensive README with overview, setup, and screenshots  
+✅ API routes tested and documented  
+✅ Commits pushed to GitHub  
 
-🖼 Screenshots
-🏠 Home Page
+---
 
-✍️ Create Post
+## 👨‍💻 Author
 
-🔐 Login Page
+**Name:** Joseph Sakala C.J.  
+**Project:** MERN Stack Integration Assignment  
+**Supervisor:** Dedan Okware  
 
-🧪 Testing
+---
 
-All endpoints were tested using Postman
-
-Database verified using MongoDB Atlas
-
-Frontend and backend integrated and tested successfully
-
-
-🧭 Submission Checklist
-
-✅ Both client and server code included
-✅ .env.example files provided
-✅ Comprehensive README with overview, setup, and screenshots
-✅ API routes tested and documented
-✅ Commits pushed to GitHub
-
-👨‍💻 Author
-
-Name: Joseph Sakala C.J.
-Project: MERN Stack Integration Assignment
-Supervisor: [Dedan Okware]
+> 📘 _Developed as part of the MERN Stack Assignment for PLP Academy._
